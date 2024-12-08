@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import Navbar from '@/common/components/Navbar';
+import Navbar from '@/common/components/navbar/Navbar';
 
 type LayoutProps = {
   children: ReactNode;
@@ -11,7 +11,11 @@ const Layout: React.FC<LayoutProps> = ({ children, currentPath, className } ) =>
 
   return (
     <div 
-      className='flex flex-col gap-8 w-full bg-white'
+      className={`
+        flex flex-col gap-8
+        justify-center items-center 
+        w-full bg-blue-500
+      `}
     >
       <Navbar currentPath={currentPath}/>
       <div className={className}>
