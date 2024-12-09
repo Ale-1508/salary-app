@@ -27,3 +27,13 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 ```bash
 npx create-next-app@latest
 ```
+
+# Packages
+
+### FortAwesome
+
+Icons:
+
+```
+npm install @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
+```
