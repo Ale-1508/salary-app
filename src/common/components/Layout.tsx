@@ -14,13 +14,14 @@ const Layout: React.FC<LayoutProps> = ({ children, currentPath, className } ) =>
       className={`
         flex flex-col gap-8
         justify-center items-center 
-        w-full bg-blue-500
+        w-full h-full 
+        px-4
       `}
     >
-      <Navbar currentPath={currentPath}/>
       <div className={className}>
         {children}
       </div>
+      <Navbar currentPath={currentPath}/>
     </div>
   );
 };
