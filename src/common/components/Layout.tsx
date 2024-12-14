@@ -15,11 +15,14 @@ const Layout: React.FC<LayoutProps> = ({ children, currentPath, className } ) =>
         flex flex-col gap-8
         justify-center items-center 
         w-full max-w-192 h-100vh 
-        bg-base
+        bg-base selection:bg-pale
+        selection:text-primary 
         px-4
       `}
     >
-      <div className={className}>
+      <div className={
+        `w-full max-w-96` + className
+      }>
         {children}
       </div>
       <Navbar currentPath={currentPath}/>
