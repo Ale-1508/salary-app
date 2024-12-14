@@ -7,12 +7,12 @@ import { NavbarOptionDefinition } from './navbarTypes';
 import NavbarOption from './NavbarOption';
 
 const navbarOptions: NavbarOptionDefinition[] = [
-  { name:"Wallets", path:"/wallets", icon: faWallet, selected: false },
-  { name:"Home", path:"/", icon: faHouse, selected: true },
-  { name:"Charts",path:"/charts", icon: faChartPie, selected: false },
+  { name:"Salaries", path:"/salaries", icon: faWallet },
+  { name:"Home", path:"/home", icon: faHouse },
+  { name:"Charts",path:"/charts", icon: faChartPie, },
 ]
 
-export default function Navbar( { currentPath } : { currentPath?:string } ) {
+export default function Navbar( { currentPath } : { currentPath:string } ) {
   const [currentScreen, setCurrentScreen] = useState(currentPath);
 
   const handleChangeRoute = (newRoute:string) => {
@@ -42,7 +42,7 @@ export default function Navbar( { currentPath } : { currentPath?:string } ) {
             return <NavbarOption 
               key={option.name.toLowerCase()} 
               option={option}
-              isSelected={option.name === currentScreen}
+              isSelected={option.path === currentScreen.toLowerCase()}
               onClick={handleChangeRoute}/>
           })
         }

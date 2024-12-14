@@ -4,7 +4,6 @@ export interface NavbarOptionDefinition {
   name: string, 
   path: string,
   icon: IconDefinition,
-  selected: boolean,
 }
 
 export interface NavbarOptionProps {

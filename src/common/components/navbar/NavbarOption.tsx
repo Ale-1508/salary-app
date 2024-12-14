@@ -3,14 +3,15 @@ import Link from "next/link";
 import { NavbarOptionProps } from "./navbarTypes";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const NavbarOption = ( {option, onClick}: NavbarOptionProps ) => {
+const NavbarOption = ( {option, isSelected, onClick}: NavbarOptionProps ) => {
   return(
     <li key={option.path}
       className={
-        `px-5 py-1.5
+        `px-4 py-3
         rounded-3xl
         font-semibold
         text-black
+        ${isSelected && "bg-pale bg-opacity-20"}
         `
       }
     >
@@ -21,7 +22,7 @@ const NavbarOption = ( {option, onClick}: NavbarOptionProps ) => {
         } }
       >
         <FontAwesomeIcon 
-          className={`${option.selected ? "text-secondary" : "text-pale"}`}
+          className={`${isSelected ? "text-secondary" : "text-pale"}`}
           icon={option.icon} size="lg"/>
       </Link>
     </li>

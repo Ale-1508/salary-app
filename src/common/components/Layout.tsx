@@ -3,7 +3,7 @@ import Navbar from '@/common/components/navbar/Navbar';
 
 type LayoutProps = {
   children: ReactNode;
-  currentPath?: string;
+  currentPath: string;
   className?: string;
 };
 
