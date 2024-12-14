@@ -14,7 +14,8 @@ const Layout: React.FC<LayoutProps> = ({ children, currentPath, className } ) =>
       className={`
         flex flex-col gap-8
         justify-center items-center 
-        w-full h-full 
+        w-full max-w-192 h-100vh 
+        bg-base
         px-4
       `}
     >

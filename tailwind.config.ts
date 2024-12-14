@@ -9,6 +9,19 @@ export default {
   ],
   theme: {
     extend: {
+      width: {
+        '128': '32rem',
+        '160': '40rem',
+        '192': '48rem',
+        '256': '64rem',
+      },
+      maxWidth: { 
+        '256': '64rem',
+        '192': '48rem', 
+      },
+      height: {
+        '100vh': '100vh',
+      },
       borderRadius: {
         '2.5xl': '1.25rem',
         '4xl': '2rem',
