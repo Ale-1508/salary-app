@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
-import Navbar from '@/common/components/navbar/Navbar';
+import Navbar2 from '@/common/components/navbar/NavbarOld';
+import { Navbar } from '@/common/components/navbar/Navbar';
 
 type LayoutProps = {
   children: ReactNode;
@@ -25,7 +26,8 @@ const Layout: React.FC<LayoutProps> = ({ children, currentPath, className } ) =>
       }>
         {children}
       </div>
-      <Navbar currentPath={currentPath}/>
+      <Navbar />
+      <Navbar2 currentPath={currentPath}/>
     </div>
   );
 };
